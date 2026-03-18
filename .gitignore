@@ -16,3 +16,13 @@ plot_source_distribution.py
 # Intermediate data
 ming.json
 ming_reorder.json
+
+# Data files (hosted on HuggingFace)
+articles_clean.json
+test_dataset.json
+
+# Wiki baseline (not included in public release)
+wiki_timeline.json
+wiki_context_builder.py
+parse_wiki_timeline.py
+run_wiki_baseline.py

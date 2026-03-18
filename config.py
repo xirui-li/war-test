@@ -2,11 +2,25 @@
 import json
 from pathlib import Path
 
+from huggingface_hub import hf_hub_download
+
 # Paths
 PROJECT_ROOT = Path(__file__).parent
-ARTICLES_PATH = PROJECT_ROOT / "articles_clean.json"
-DATASET_PATH = PROJECT_ROOT / "test_dataset.json"
 RESULTS_DIR = PROJECT_ROOT / "results"
+
+# HuggingFace dataset
+HF_DATASET_REPO = "war-forecast-arena/war-forecast-bench"
+
+def _ensure_data_file(filename: str) -> Path:
+    """Return local path to a data file, downloading from HF if needed."""
+    local = PROJECT_ROOT / filename
+    if local.exists():
+        return local
+    print(f"Downloading {filename} from {HF_DATASET_REPO}...")
+    return Path(hf_hub_download(repo_id=HF_DATASET_REPO, filename=filename, repo_type="dataset"))
+
+ARTICLES_PATH = _ensure_data_file("articles_clean.json")
+DATASET_PATH = _ensure_data_file("test_dataset.json")
 
 # Load API keys from sibling project config
 _config_path = PROJECT_ROOT.parent / "war-prediction-LLMs" / "config.json"

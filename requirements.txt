@@ -1,4 +1,5 @@
 openai>=1.0
 datasets
+huggingface_hub
 trafilatura
 googlenewsdecoder

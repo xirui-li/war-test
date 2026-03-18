@@ -4,7 +4,7 @@
 
 This is the code repository for the paper **"When AI Navigates the Fog of War"**. We present a temporally grounded benchmark that evaluates whether frontier LLMs can reason about an unfolding geopolitical conflict using only information available at each moment in time.
 
-[[Paper]](https://arxiv.org/abs/2603.16642) [[Website]](https://war-forecast-arena.com)
+[[Paper]](https://arxiv.org/abs/2603.16642) [[Website]](https://war-forecast-arena.com) [[Dataset]](https://huggingface.co/datasets/war-forecast-arena/war-forecast-bench)
 
 ## Overview
 
@@ -33,7 +33,9 @@ We construct **11 critical temporal nodes** spanning the early stages of the 202
 pip install -r requirements.txt
 ```
 
-API keys are loaded from `../war-prediction-LLMs/config.json` (not included in this repo). The config file should contain:
+**Data** is automatically downloaded from [HuggingFace](https://huggingface.co/datasets/war-forecast-arena/war-forecast-bench) on first run.
+
+**API keys** are loaded from `../war-prediction-LLMs/config.json` (not included in this repo). The config file should contain:
 
 ```json
 {
@@ -57,9 +59,6 @@ python run_predictions.py --models openai/gpt-5.4 --time-points T3
 # Full benchmark (all models, all time points)
 python run_predictions.py
 
-# Wikipedia baseline (uses wiki timeline instead of news articles)
-python run_wiki_baseline.py
-
 # Evaluate predictions
 python evaluate.py
 
@@ -74,13 +73,11 @@ python export_hf.py --push username/repo-name
 
 ```
 war-test/
-├── config.py              # API keys, model list, constants
+├── config.py              # API keys, model list, constants, HF data loading
 ├── context_builder.py     # Article filtering by cutoff datetime
 ├── prompt_builder.py      # System + user prompt construction
 ├── response_parser.py     # LLM JSON response parsing
 ├── run_predictions.py     # Main inference pipeline (CLI)
-├── run_wiki_baseline.py   # Wikipedia baseline experiment
-├── wiki_context_builder.py# Wiki timeline context builder
 ├── evaluate.py            # Evaluate predictions via GPT-4o-mini
 ├── summarize_responses.py # Extract probability statements from responses
 ├── translate.py           # Translate responses to Chinese
@@ -88,13 +85,10 @@ war-test/
 ├── run_new_question.py    # Run predictions for newly added questions
 ├── build_articles.py      # Build articles dataset from raw sources
 ├── fetch_fulltext.py      # Fetch full text for headline-only articles
-├── parse_wiki_timeline.py # Parse Wikipedia timeline into structured events
 ├── export_hf.py           # HuggingFace dataset export
 ├── audit_data.py          # Data quality audit script
 ├── preview_prompt.py      # Preview prompts and token estimates
-├── test_dataset.json      # 11 time points with questions and ground truth
-├── articles_clean.json    # ~1,685 news articles as context
-├── wiki_timeline.json     # Parsed Wikipedia timeline events
+├── dataset/README.md      # HuggingFace dataset card
 └── requirements.txt
 ```
 
