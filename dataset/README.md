@@ -14,9 +14,23 @@ tags:
 pretty_name: "War Forecast Bench"
 size_categories:
   - 1K<n<10K
+configs:
+  - config_name: questions
+    data_files:
+      - split: train
+        path: questions.parquet
+  - config_name: articles
+    data_files:
+      - split: train
+        path: articles.parquet
+default_config_name: questions
 ---
 
 # War Forecast Bench
+
+<p align="center">
+  <img src="main.jpg" width="100%" alt="Timeline of critical temporal nodes and AI predictions">
+</p>
 
 Dataset for the paper **"When AI Navigates the Fog of War"** ([arXiv:2603.16642](https://arxiv.org/abs/2603.16642)).
 
@@ -51,7 +65,7 @@ The news article corpus used as context for LLM predictions. Contains:
 ```python
 from datasets import load_dataset
 
-dataset = load_dataset("war-forecast-arena/war-forecast-bench")
+dataset = load_dataset("AIcell/war-test-dataset")
 ```
 
 Or use with the evaluation pipeline:

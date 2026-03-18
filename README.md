@@ -4,7 +4,11 @@
 
 This is the code repository for the paper **"When AI Navigates the Fog of War"**. We present a temporally grounded benchmark that evaluates whether frontier LLMs can reason about an unfolding geopolitical conflict using only information available at each moment in time.
 
-[[Paper]](https://arxiv.org/abs/2603.16642) [[Website]](https://war-forecast-arena.com) [[Dataset]](https://huggingface.co/datasets/war-forecast-arena/war-forecast-bench)
+[[Paper]](https://arxiv.org/abs/2603.16642) [[Website]](https://war-forecast-arena.com) [[Dataset]](https://huggingface.co/datasets/AIcell/war-test-dataset)
+
+<p align="center">
+  <img src="assets/main.jpg" width="100%" alt="Timeline of critical temporal nodes and AI predictions">
+</p>
 
 ## Overview
 
@@ -33,7 +37,7 @@ We construct **11 critical temporal nodes** spanning the early stages of the 202
 pip install -r requirements.txt
 ```
 
-**Data** is automatically downloaded from [HuggingFace](https://huggingface.co/datasets/war-forecast-arena/war-forecast-bench) on first run.
+**Data** is automatically downloaded from [HuggingFace](https://huggingface.co/datasets/AIcell/war-test-dataset) on first run.
 
 **API keys** are loaded from `../war-prediction-LLMs/config.json` (not included in this repo). The config file should contain:
 
@@ -80,7 +84,7 @@ war-test/
 ├── run_predictions.py     # Main inference pipeline (CLI)
 ├── evaluate.py            # Evaluate predictions via GPT-4o-mini
 ├── summarize_responses.py # Extract probability statements from responses
-├── translate.py           # Translate responses to Chinese
+├── translate.py           # Translate responses to Chinese for better inspection
 ├── rerun.py               # Re-run specific failed predictions
 ├── run_new_question.py    # Run predictions for newly added questions
 ├── build_articles.py      # Build articles dataset from raw sources

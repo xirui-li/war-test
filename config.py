@@ -9,7 +9,7 @@ PROJECT_ROOT = Path(__file__).parent
 RESULTS_DIR = PROJECT_ROOT / "results"
 
 # HuggingFace dataset
-HF_DATASET_REPO = "war-forecast-arena/war-forecast-bench"
+HF_DATASET_REPO = "AIcell/war-test-dataset"
 
 def _ensure_data_file(filename: str) -> Path:
     """Return local path to a data file, downloading from HF if needed."""
