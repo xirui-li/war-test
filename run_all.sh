@@ -8,4 +8,4 @@
 #   bash run_all.sh --dry-run      # Preview only, no API calls
 
 cd "$(dirname "$0")"
-python run_predictions.py "$@"
+python src/run_predictions.py "$@"

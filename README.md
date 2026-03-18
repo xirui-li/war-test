@@ -69,48 +69,51 @@ pip install -r requirements.txt
 
 ```bash
 # Audit data quality
-python audit_data.py
+python src/audit_data.py
 
 # Dry run (verify prompts, no API calls)
-python run_predictions.py --dry-run
+python src/run_predictions.py --dry-run
 
 # Run single model
-python run_predictions.py --models openai/gpt-5.4 --time-points T3
+python src/run_predictions.py --models openai/gpt-5.4 --time-points T3
 
 # Full benchmark (all models, all time points)
-python run_predictions.py
+bash run_all.sh
 
-# Evaluate predictions
-python evaluate.py
-
-# Translate responses to Chinese
-python translate.py
+# Evaluate + translate
+bash run_eval_and_translate.sh
 
 # Export to HuggingFace
-python export_hf.py --push username/repo-name
+python src/export_hf.py --push username/repo-name
 ```
 
 ## 📁 File Structure
 
 ```
 war-test/
-├── config.py              # API key, model list, constants, HF data loading
-├── context_builder.py     # Article filtering by cutoff datetime
-├── prompt_builder.py      # System + user prompt construction
-├── response_parser.py     # LLM JSON response parsing
-├── run_predictions.py     # Main inference pipeline (CLI)
-├── evaluate.py            # Evaluate predictions via GPT-4o-mini
-├── summarize_responses.py # Extract probability statements from responses
-├── translate.py           # Translate responses to Chinese for better inspection
-├── rerun.py               # Re-run specific failed predictions
-├── run_new_question.py    # Run predictions for newly added questions
-├── build_articles.py      # Build articles dataset from raw sources
-├── fetch_fulltext.py      # Fetch full text for headline-only articles
-├── export_hf.py           # HuggingFace dataset export
-├── audit_data.py          # Data quality audit script
-├── preview_prompt.py      # Preview prompts and token estimates
-├── dataset/README.md      # HuggingFace dataset card
-└── requirements.txt
+├── README.md
+├── requirements.txt
+├── run_all.sh                 # Run full benchmark (all models)
+├── run_eval_and_translate.sh  # Evaluate + translate pipeline
+├── test_gpt.sh               # Quick test on single model
+├── src/
+│   ├── config.py              # API key, model list, constants, HF data loading
+│   ├── context_builder.py     # Article filtering by cutoff datetime
+│   ├── prompt_builder.py      # System + user prompt construction
+│   ├── response_parser.py     # LLM JSON response parsing
+│   ├── run_predictions.py     # Main inference pipeline
+│   ├── evaluate.py            # Evaluate predictions via GPT-4o-mini
+│   ├── summarize_responses.py # Extract probability statements
+│   ├── translate.py           # Translate responses to Chinese
+│   ├── rerun.py               # Re-run specific failed predictions
+│   ├── run_new_question.py    # Run predictions for new questions
+│   ├── build_articles.py      # Build articles dataset from raw sources
+│   ├── fetch_fulltext.py      # Fetch full text for headline-only articles
+│   ├── export_hf.py           # HuggingFace dataset export
+│   ├── audit_data.py          # Data quality audit
+│   └── preview_prompt.py      # Preview prompts and token estimates
+├── assets/                    # Images
+└── dataset/                   # HuggingFace dataset card & parquet
 ```
 
 ## 📝 Citation
