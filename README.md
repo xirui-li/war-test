@@ -14,6 +14,22 @@ This is the code repository for the paper **"When AI Navigates the Fog of War"**
 
 We construct **11 critical temporal nodes** spanning the early stages of the 2026 Middle East conflict (Feb 27 – Mar 6, 2026), along with **42 node-specific verifiable questions** and **5 general exploratory questions**. At each time point, models receive only news articles published before the event and must reason about what happens next. This design substantially mitigates training-data leakage concerns, as the conflict unfolded after the training cutoff of current frontier models.
 
+## 📋 Temporal Nodes
+
+| Node | Date | Event | Theme | Theme Description |
+|:----:|------|-------|:-----:|-------------------|
+| T0 | Feb 27 | Operation Epic Fury | I | Initial Outbreak |
+| T1 | Feb 28 | Israeli-US Strikes | I | Initial Outbreak |
+| T2 | Feb 28 | Iranian Strikes | I | Initial Outbreak |
+| T3 | Mar 1 | Two Missiles towards British Bases on Cyprus | II | Threshold Crossings |
+| T4 | Mar 1 | Oil Refiner and Oil Tanker Was Attacked | III | Economic Shockwaves |
+| T5 | Mar 2 | Qatar Halts Energy Production | III | Economic Shockwaves |
+| T6 | Mar 2 | Natanz Nuclear Facility Damaged | II | Threshold Crossings |
+| T7 | Mar 3 | U.S. Begins Evacuation of Citizens from the Middle East | II | Threshold Crossings |
+| T8 | Mar 3 | Nine Countries Involved and Israeli Ground Invasion | II | Threshold Crossings |
+| T9 | Mar 3 | Mojtaba Khamenei Becomes Supreme Leader | IV | Political Signaling |
+| T10 | Mar 6 | Iranian Apology to Neighboring Countries | IV | Political Signaling |
+
 ## 🔍 Key Findings
 
 1. 🧠 Current state-of-the-art LLMs often show **strong strategic reasoning**, attending to underlying incentives, deterrence pressures, and material constraints rather than surface political rhetoric.
