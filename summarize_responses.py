@@ -18,13 +18,13 @@ from pathlib import Path
 
 from openai import OpenAI
 
-from config import OPENAI_API_KEY, OPENAI_BASE_URL
+from config import API_KEY, API_BASE_URL
 
 # ── Config ──────────────────────────────────────────────────────────────────
 PROJECT_ROOT = Path(__file__).parent
 RESULTS_DIR = PROJECT_ROOT / "results"  # default, overridden by --dir
 
-MODEL = "gpt-4o"
+MODEL = "openai/gpt-4o"
 TEMPERATURE = 0.0
 CALL_DELAY = 0.3
 
@@ -120,7 +120,7 @@ def main():
     suffix = f"_{args.lang}" if args.lang != "en" else ""
     output_path = RESULTS_DIR / f"summary{suffix}.json"
 
-    client = OpenAI(api_key=OPENAI_API_KEY, base_url=OPENAI_BASE_URL)
+    client = OpenAI(api_key=API_KEY, base_url=API_BASE_URL)
 
     # Load cache
     existing = {}

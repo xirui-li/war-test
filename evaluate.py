@@ -14,14 +14,14 @@ from pathlib import Path
 
 from openai import OpenAI
 
-from config import OPENAI_API_KEY, OPENAI_BASE_URL
+from config import API_KEY, API_BASE_URL
 
 # ── Config ──────────────────────────────────────────────────────────────────
 PROJECT_ROOT = Path(__file__).parent
 RESULTS_DIR = PROJECT_ROOT / "results"
 EVAL_OUTPUT = RESULTS_DIR / "evaluation.json"
 
-MODEL = "gpt-4o-mini"
+MODEL = "openai/gpt-4o-mini"
 TEMPERATURE = 0.0
 CALL_DELAY = 0.3  # seconds between API calls
 
@@ -105,7 +105,7 @@ def main():
         RESULTS_DIR = Path(args.results_dir)
         EVAL_OUTPUT = RESULTS_DIR / "evaluation.json"
 
-    client = OpenAI(api_key=OPENAI_API_KEY, base_url=OPENAI_BASE_URL)
+    client = OpenAI(api_key=API_KEY, base_url=API_BASE_URL)
 
     # Load existing evaluations for resume
     existing_evals = {}

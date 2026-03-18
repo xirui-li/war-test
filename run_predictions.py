@@ -20,8 +20,8 @@ from pathlib import Path
 from openai import OpenAI
 
 from config import (
-    OPENROUTER_API_KEY,
-    OPENROUTER_BASE_URL,
+    API_KEY,
+    API_BASE_URL,
     MODELS,
     DATASET_PATH,
     RESULTS_DIR,
@@ -280,8 +280,8 @@ def run_model_worker(model, sections, all_articles, total_qs):
 
     # Each thread gets its own client
     client = OpenAI(
-        base_url=OPENROUTER_BASE_URL,
-        api_key=OPENROUTER_API_KEY,
+        base_url=API_BASE_URL,
+        api_key=API_KEY,
     )
 
     run_single_model(client, model, sections, all_articles)

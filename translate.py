@@ -15,9 +15,9 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from openai import OpenAI
 
-from config import OPENAI_API_KEY, OPENAI_BASE_URL
+from config import API_KEY, API_BASE_URL
 
-MODEL = "gpt-4o-mini"
+MODEL = "openai/gpt-4o-mini"
 TEMPERATURE = 0.3
 
 TRANSLATE_PROMPT = """\
@@ -78,7 +78,7 @@ def main():
 
     print(f"Loaded {len(data)} entries from {args.input}")
 
-    client = OpenAI(api_key=OPENAI_API_KEY, base_url=OPENAI_BASE_URL)
+    client = OpenAI(api_key=API_KEY, base_url=API_BASE_URL)
     total = len(data)
     start = time.time()
 

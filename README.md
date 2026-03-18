@@ -1,26 +1,28 @@
-# When AI Navigates the Fog of War
+# 🌐 When AI Navigates the Fog of War
 
 *Can AI reason about and forecast the trajectory of an ongoing war before it transitions into history?*
 
 This is the code repository for the paper **"When AI Navigates the Fog of War"**. We present a temporally grounded benchmark that evaluates whether frontier LLMs can reason about an unfolding geopolitical conflict using only information available at each moment in time.
 
-[[Paper]](https://arxiv.org/abs/2603.16642) [[Website]](https://war-forecast-arena.com) [[Dataset]](https://huggingface.co/datasets/AIcell/war-test-dataset)
+📄 [Paper](https://arxiv.org/abs/2603.16642) | 🖥️ [Website](https://war-forecast-arena.com) | 🤗 [Dataset](https://huggingface.co/datasets/AIcell/war-test-dataset)
 
 <p align="center">
   <img src="assets/main.jpg" width="100%" alt="Timeline of critical temporal nodes and AI predictions">
 </p>
 
-## Overview
+## 📖 Overview
 
-We construct **11 critical temporal nodes** spanning the early stages of the 2026 Middle East conflict (Feb 27 -- Mar 6, 2026), along with **42 node-specific verifiable questions** and **5 general exploratory questions**. At each time point, models receive only news articles published before the event and must reason about what happens next. This design substantially mitigates training-data leakage concerns, as the conflict unfolded after the training cutoff of current frontier models.
+We construct **11 critical temporal nodes** spanning the early stages of the 2026 Middle East conflict (Feb 27 – Mar 6, 2026), along with **42 node-specific verifiable questions** and **5 general exploratory questions**. At each time point, models receive only news articles published before the event and must reason about what happens next. This design substantially mitigates training-data leakage concerns, as the conflict unfolded after the training cutoff of current frontier models.
 
-## Key Findings
+## 🔍 Key Findings
 
-1. Current state-of-the-art LLMs often show **strong strategic reasoning**, attending to underlying incentives, deterrence pressures, and material constraints rather than surface political rhetoric.
-2. This capability is **uneven across domains**: models are more reliable in economically and logistically structured settings than in politically ambiguous multi-actor environments.
-3. Model narratives **evolve over time**, shifting from early expectations of rapid containment toward more systemic accounts of regional entrenchment and attritional de-escalation.
+1. 🧠 Current state-of-the-art LLMs often show **strong strategic reasoning**, attending to underlying incentives, deterrence pressures, and material constraints rather than surface political rhetoric.
+2. ⚖️ This capability is **uneven across domains**: models are more reliable in economically and logistically structured settings than in politically ambiguous multi-actor environments.
+3. 📈 Model narratives **evolve over time**, shifting from early expectations of rapid containment toward more systemic accounts of regional entrenchment and attritional de-escalation.
 
-## Models
+## 🤖 Models
+
+All inference is routed through [OpenRouter](https://openrouter.ai/), a unified API gateway for frontier LLMs.
 
 | Model | Provider |
 |-------|----------|
@@ -31,24 +33,23 @@ We construct **11 critical temporal nodes** spanning the early stages of the 202
 | `moonshotai/kimi-k2.5` | Moonshot |
 | `minimax/minimax-m2.5` | MiniMax |
 
-## Setup
+## ⚙️ Setup
 
 ```bash
 pip install -r requirements.txt
 ```
 
-**Data** is automatically downloaded from [HuggingFace](https://huggingface.co/datasets/AIcell/war-test-dataset) on first run.
+📦 **Data** is automatically downloaded from [HuggingFace](https://huggingface.co/datasets/AIcell/war-test-dataset) on first run.
 
-**API keys** are loaded from `../war-prediction-LLMs/config.json` (not included in this repo). The config file should contain:
+🔑 **API Key**: All API calls go through [OpenRouter](https://openrouter.ai/). Sign up for a free account and get your API key, then create `../war-prediction-LLMs/config.json`:
 
 ```json
 {
-  "OPENROUTER_API_KEY": "your-key",
-  "OPENAI_API_KEY": "your-key"
+  "OPENROUTER_API_KEY": "your-openrouter-key"
 }
 ```
 
-## Usage
+## 🚀 Usage
 
 ```bash
 # Audit data quality
@@ -73,11 +74,11 @@ python translate.py
 python export_hf.py --push username/repo-name
 ```
 
-## File Structure
+## 📁 File Structure
 
 ```
 war-test/
-├── config.py              # API keys, model list, constants, HF data loading
+├── config.py              # API key, model list, constants, HF data loading
 ├── context_builder.py     # Article filtering by cutoff datetime
 ├── prompt_builder.py      # System + user prompt construction
 ├── response_parser.py     # LLM JSON response parsing
@@ -96,7 +97,7 @@ war-test/
 └── requirements.txt
 ```
 
-## Citation
+## 📝 Citation
 
 ```bibtex
 @misc{li2026ainavigatesfogwar,

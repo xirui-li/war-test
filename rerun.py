@@ -13,10 +13,8 @@ from pathlib import Path
 from openai import OpenAI
 
 from config import (
-    OPENROUTER_API_KEY,
-    OPENROUTER_BASE_URL,
-    OPENAI_API_KEY,
-    OPENAI_BASE_URL,
+    API_KEY,
+    API_BASE_URL,
     DATASET_PATH,
     RESULTS_DIR,
     API_TEMPERATURE,
@@ -105,7 +103,7 @@ def main():
     all_articles = load_articles()
     section_map = {s["time_point_id"]: s for s in sections}
 
-    client_or = OpenAI(base_url=OPENROUTER_BASE_URL, api_key=OPENROUTER_API_KEY)
+    client = OpenAI(base_url=API_BASE_URL, api_key=API_KEY)
 
     tasks = sorted(to_rerun, key=lambda x: (x[0], x[1], x[2]))
     for i, (model, tp, qi) in enumerate(tasks):
@@ -120,7 +118,7 @@ def main():
         print(f"  [{i+1}/{len(tasks)}] {short} {tp} Q{qi}")
 
         try:
-            resp = client_or.chat.completions.create(
+            resp = client.chat.completions.create(
                 model=model,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=API_TEMPERATURE,
@@ -161,7 +159,7 @@ def main():
 
     # Step 3: Re-evaluate
     print("\n=== Step 3: Re-evaluate ===")
-    client_oai = OpenAI(api_key=OPENAI_API_KEY, base_url=OPENAI_BASE_URL)
+    client_eval = OpenAI(api_key=API_KEY, base_url=API_BASE_URL)
 
     EXTRACT_PROMPT = (
         'You are an evaluation assistant. Given a question and a model\'s response, extract:\n'
@@ -184,8 +182,8 @@ def main():
             if key in eval_keys:
                 continue
             try:
-                resp = client_oai.chat.completions.create(
-                    model="gpt-4o-mini",
+                resp = client_eval.chat.completions.create(
+                    model="openai/gpt-4o-mini",
                     messages=[{"role": "user", "content": EXTRACT_PROMPT.format(
                         question=entry["question_en"], response=entry["response"][:6000]
                     )}],
@@ -238,8 +236,8 @@ def main():
                 out["response_zh"] = ""
             else:
                 try:
-                    resp = client_oai.chat.completions.create(
-                        model="gpt-4o-mini",
+                    resp = client_eval.chat.completions.create(
+                        model="openai/gpt-4o-mini",
                         messages=[{"role": "user", "content": TRANSLATE_PROMPT.format(response=entry["response"])}],
                         temperature=0.3, max_tokens=4096,
                     )

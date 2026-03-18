@@ -15,10 +15,8 @@ from pathlib import Path
 from openai import OpenAI
 
 from config import (
-    OPENROUTER_API_KEY,
-    OPENROUTER_BASE_URL,
-    OPENAI_API_KEY,
-    OPENAI_BASE_URL,
+    API_KEY,
+    API_BASE_URL,
     DATASET_PATH,
     RESULTS_DIR,
     API_TEMPERATURE,
@@ -59,8 +57,7 @@ def main():
         s["time_point_id"] = f"T{i}"
 
     all_articles = load_articles()
-    client_or = OpenAI(base_url=OPENROUTER_BASE_URL, api_key=OPENROUTER_API_KEY)
-    client_oai = OpenAI(api_key=OPENAI_API_KEY, base_url=OPENAI_BASE_URL)
+    client = OpenAI(base_url=API_BASE_URL, api_key=API_KEY)
 
     # Build tasks: last question of each time point × all models
     tasks = []
@@ -92,7 +89,7 @@ def main():
         print(f"  [{i+1}/{len(tasks)}] {short} {tp} Q{qi} ...", end=" ", flush=True)
 
         try:
-            resp = client_or.chat.completions.create(
+            resp = client.chat.completions.create(
                 model=model,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=API_TEMPERATURE,
@@ -150,8 +147,8 @@ def main():
             print(f"  [{i+1}/{len(new_entries)}] {short} {entry['time_point']} Q{entry['question_index']}: skipped")
         else:
             try:
-                resp = client_oai.chat.completions.create(
-                    model="gpt-4o-mini",
+                resp = client.chat.completions.create(
+                    model="openai/gpt-4o-mini",
                     messages=[{"role": "user", "content": TRANSLATE_PROMPT.format(response=entry["response"])}],
                     temperature=0.3, max_tokens=4096,
                 )

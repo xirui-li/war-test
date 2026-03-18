@@ -22,15 +22,13 @@ def _ensure_data_file(filename: str) -> Path:
 ARTICLES_PATH = _ensure_data_file("articles_clean.json")
 DATASET_PATH = _ensure_data_file("test_dataset.json")
 
-# Load API keys from sibling project config
+# Load API key from sibling project config
 _config_path = PROJECT_ROOT.parent / "war-prediction-LLMs" / "config.json"
 with open(_config_path) as f:
     _secrets = json.load(f)
 
-OPENROUTER_API_KEY = _secrets["OPENROUTER_API_KEY"]
-OPENAI_API_KEY = _secrets["OPENAI_API_KEY"]
-OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-OPENAI_BASE_URL = "https://us.api.openai.com/v1"
+API_KEY = _secrets["OPENROUTER_API_KEY"]
+API_BASE_URL = "https://openrouter.ai/api/v1"
 
 # Models to evaluate
 MODELS = [
