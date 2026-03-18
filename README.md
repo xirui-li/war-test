@@ -1,46 +1,70 @@
-# War Prediction LLM Benchmark
+# When AI Navigates the Fog of War
 
-A research pipeline that evaluates whether Large Language Models can predict geopolitical outcomes during the 2026 Iran-Israel conflict, given real-time news articles as context.
+*Can AI reason about and forecast the trajectory of an ongoing war before it transitions into history?*
+
+This is the code repository for the paper **"When AI Navigates the Fog of War"**. We present a temporally grounded benchmark that evaluates whether frontier LLMs can reason about an unfolding geopolitical conflict using only information available at each moment in time.
+
+[[Paper]](https://arxiv.org/abs/2603.16642) [[Website]](https://war-forecast-arena.com)
 
 ## Overview
 
-The test dataset contains 11 time points (T0–T10, Feb 27 – Mar 6, 2026), each representing a key event in the conflict timeline. At each time point, LLMs receive news articles published before the event and answer Yes/No prediction questions about what happens next. Results are compared against ground truth and exported as a HuggingFace dataset.
+We construct **11 critical temporal nodes** spanning the early stages of the 2026 Middle East conflict (Feb 27 -- Mar 6, 2026), along with **42 node-specific verifiable questions** and **5 general exploratory questions**. At each time point, models receive only news articles published before the event and must reason about what happens next. This design substantially mitigates training-data leakage concerns, as the conflict unfolded after the training cutoff of current frontier models.
 
-## Dataset Structure
+## Key Findings
 
-- **11 time points** with precise event timestamps
-- **40 Yes/No questions** across all time points
-- **6 LLM models** evaluated via OpenRouter API
-- **~1,685 news articles** as context (from 12+ sources)
+1. Current state-of-the-art LLMs often show **strong strategic reasoning**, attending to underlying incentives, deterrence pressures, and material constraints rather than surface political rhetoric.
+2. This capability is **uneven across domains**: models are more reliable in economically and logistically structured settings than in politically ambiguous multi-actor environments.
+3. Model narratives **evolve over time**, shifting from early expectations of rapid containment toward more systemic accounts of regional entrenchment and attritional de-escalation.
 
 ## Models
 
 | Model | Provider |
 |-------|----------|
-| `openai/gpt-5.3-chat` | OpenAI |
+| `openai/gpt-5.4` | OpenAI |
 | `qwen/qwen3.5-35b-a3b` | Qwen |
 | `google/gemini-3.1-flash-lite-preview` | Google |
 | `anthropic/claude-sonnet-4.6` | Anthropic |
 | `moonshotai/kimi-k2.5` | Moonshot |
 | `minimax/minimax-m2.5` | MiniMax |
 
+## Setup
+
+```bash
+pip install -r requirements.txt
+```
+
+API keys are loaded from `../war-prediction-LLMs/config.json` (not included in this repo). The config file should contain:
+
+```json
+{
+  "OPENROUTER_API_KEY": "your-key",
+  "OPENAI_API_KEY": "your-key"
+}
+```
+
 ## Usage
 
 ```bash
-# Install dependencies
-pip install -r requirements.txt
-
 # Audit data quality
 python audit_data.py
 
 # Dry run (verify prompts, no API calls)
 python run_predictions.py --dry-run
 
-# Run single model test
-python run_predictions.py --models openai/gpt-5.3-chat --time-points T3
+# Run single model
+python run_predictions.py --models openai/gpt-5.4 --time-points T3
 
 # Full benchmark (all models, all time points)
 python run_predictions.py
+
+# Wikipedia baseline (uses wiki timeline instead of news articles)
+python run_wiki_baseline.py
+
+# Evaluate predictions
+python evaluate.py
+
+# Translate responses to Chinese
+python translate.py
 
 # Export to HuggingFace
 python export_hf.py --push username/repo-name
@@ -50,24 +74,40 @@ python export_hf.py --push username/repo-name
 
 ```
 war-test/
-├── test_dataset.json      # 11 time points with questions and ground truth
 ├── config.py              # API keys, model list, constants
 ├── context_builder.py     # Article filtering by cutoff datetime
 ├── prompt_builder.py      # System + user prompt construction
 ├── response_parser.py     # LLM JSON response parsing
 ├── run_predictions.py     # Main inference pipeline (CLI)
+├── run_wiki_baseline.py   # Wikipedia baseline experiment
+├── wiki_context_builder.py# Wiki timeline context builder
+├── evaluate.py            # Evaluate predictions via GPT-4o-mini
+├── summarize_responses.py # Extract probability statements from responses
+├── translate.py           # Translate responses to Chinese
+├── rerun.py               # Re-run specific failed predictions
+├── run_new_question.py    # Run predictions for newly added questions
+├── build_articles.py      # Build articles dataset from raw sources
+├── fetch_fulltext.py      # Fetch full text for headline-only articles
+├── parse_wiki_timeline.py # Parse Wikipedia timeline into structured events
 ├── export_hf.py           # HuggingFace dataset export
 ├── audit_data.py          # Data quality audit script
-├── requirements.txt
-└── results/               # Output directory
-    ├── results.json       # Full prediction results
-    └── summary.json       # Accuracy by model / time point
+├── preview_prompt.py      # Preview prompts and token estimates
+├── test_dataset.json      # 11 time points with questions and ground truth
+├── articles_clean.json    # ~1,685 news articles as context
+├── wiki_timeline.json     # Parsed Wikipedia timeline events
+└── requirements.txt
 ```
 
-## Methodology
+## Citation
 
-1. For each time point, articles published **before** the event timestamp are collected as context
-2. Articles are sorted by recency, capped at 150 articles / 30K chars
-3. All questions for a time point are batched into a single LLM call
-4. LLM returns structured JSON with Yes/No answers and rationales
-5. Predictions are compared against ground truth for accuracy metrics
+```bibtex
+@misc{li2026ainavigatesfogwar,
+      title={When AI Navigates the Fog of War},
+      author={Ming Li and Xirui Li and Tianyi Zhou},
+      year={2026},
+      eprint={2603.16642},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2603.16642},
+}
+```

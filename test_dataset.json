@@ -1,280 +1,652 @@
 {
     "sections": [
-      {
-        "title": "T0: Feb 27, Operation Epic Fury",
-        "event_datetime": "2026-02-27T20:38:00Z",
-        "questions": [
-          {
-            "original_cn": "美国是否会真的进攻伊朗本土？",
-            "scenario_question_en": "Is the United States likely to conduct direct military strikes on Iranian territory?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "美国是否会采用经济制裁？",
-            "scenario_question_en": "Could the United States prioritize economic sanctions or diplomatic pressure over military action?",
-            "answer": "No"
-          },
-          {
-            "original_cn": "这是否意味着战争的开始？",
-            "scenario_question_en": "Does the announcement of Operation Epic Fury signal the beginning of a broader military conflict?",
-            "answer": "Yes"
-          }
-        ]
-      },
-      {
-        "title": "T1: Feb 28, Israeli-US Strikes",
-        "event_datetime": "2026-02-28T06:15:00Z",
-        "questions": [
-          {
-            "original_cn": "美国会不会继续扩大空袭？",
-            "scenario_question_en": "Are the Israeli-U.S. strikes likely to escalate into a broader military campaign?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "伊朗会不会进行报复？",
-            "scenario_question_en": "Is Iran likely to retaliate militarily in response to the strikes?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "如果伊朗决定报复，他的目标会是哪里？美军事基地，还是直接无差别轰炸？",
-            "scenario_question_en": "If Iran retaliates, is it more likely to indiscriminately bomb Israeli-U.S. territory than to target U.S. military bases?",
-            "answer": "No"
-          },
-          {
-            "original_cn": "中东其他海湾国家是否会受到影响？",
-            "scenario_question_en": "Could the conflict expand to affect other Gulf states in the region?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "中东空域是否会关闭？",
-            "scenario_question_en": "Is regional airspace in the Middle East likely to face widespread closures due to security risks?",
-            "answer": "Yes"
-          }
-        ]
-      },
-      {
-        "title": "T2: Feb 28, Iranian Strikes",
-        "event_datetime": "2026-02-28T13:30:00Z",
-        "questions": [
-          {
-            "original_cn": "这次伊朗打击是一次象征性报复，还是持续军事行动的第一波？",
-            "scenario_question_en": "Are the Iranian strikes likely to remain symbolic retaliation, or could they mark the beginning of sustained military operations?",
-            "answer": "Sustained military operations"
-          },
-          {
-            "original_cn": "霍尔木兹海峡是否会受到威胁？",
-            "scenario_question_en": "Could Iran attempt to disrupt shipping through the Strait of Hormuz?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "受伊朗冲突影响的中东其他国家是否会参战？",
-            "scenario_question_en": "Are other countries in the region likely to become directly involved in the conflict?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "中东空域是否会关闭？",
-            "scenario_question_en": "Is large-scale closure of Middle Eastern airspace likely following these strikes?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "伊朗内部会不会发生叛乱？",
-            "scenario_question_en": "Could the conflict trigger internal rebel army within Iran?",
-            "answer": "No"
-          }
-        ]
-      },
-      {
-        "title": "T3: Mar 1, Two Missiles towards British Bases on Cyprus",
-        "event_datetime": "2026-03-01T12:00:00Z",
-        "questions": [
-          {
-            "original_cn": "英国会不会正式介入战争？",
-            "scenario_question_en": "Is the United Kingdom likely to become directly involved in the conflict?",
-            "answer": "No"
-          },
-          {
-            "original_cn": "北约会不会被卷入，战争是否扩展到地中海战区？",
-            "scenario_question_en": "Is NATO become involved, expanding the conflict into the Mediterranean theater?",
-            "answer": "No"
-          },
-          {
-            "original_cn": "地中海航运是否受到影响？",
-            "scenario_question_en": "Could the conflict disrupt commercial shipping or maritime security in the Mediterranean?",
-            "answer": "No"
-          }
-        ]
-      },
-      {
-        "title": "T4: Mar 1, Oil Refiner and Oil Tanker Was Attacked",
-        "event_datetime": "2026-03-01T12:00:00Z",
-        "questions": [
-          {
-            "original_cn": "伊朗是否会持续攻击更多邮轮，来进行事实上对霍尔木兹海峡的封锁？",
-            "scenario_question_en": "Is Iran likely to continue targeting oil tankers in an attempt to disrupt traffic through the Strait of Hormuz?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "国际海军是否会建立护航行动？",
-            "scenario_question_en": "Could international naval forces establish escort missions to protect commercial shipping?",
-            "answer": "No"
-          },
-          {
-            "original_cn": "美国海军是否会建立护航行动？",
-            "scenario_question_en": "Could American naval forces establish escort missions to protect commercial shipping?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "能源基础设施是否会成为主要战场，伊朗是否会攻击更多炼油厂水厂等能源相关设施？",
-            "scenario_question_en": "Are energy facilities such as refineries, desalination plants, and oil terminals likely to become primary targets?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "油价是否会产生剧烈波动？",
-            "scenario_question_en": "Could these attacks lead to significant volatility in global oil prices?",
-            "answer": "Yes"
-          }
-        ]
-      },
-      {
-        "title": "T5: Mar 2, Natanz Nuclear Facility Damaged",
-        "event_datetime": "2026-03-02T12:00:00Z",
-        "questions": [
-          {
-            "original_cn": "美国以色列是否会持续的攻击核设施？",
-            "scenario_question_en": "Are the United States and Israel likely to continue targeting Iranian nuclear facilities?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "以色列核设施会不会遭到破坏",
-            "scenario_question_en": "Will Isreal nuclear-related infrastructure be damaged?",
-            "answer": "No"
-          },
-          {
-            "original_cn": "伊朗是否会退出核不扩散框架？是否会公开宣布核武器研发计划？",
-            "scenario_question_en": "Is Iran likely to withdraw from nuclear non-proliferation commitments or openly pursue nuclear weapons development?",
-            "answer": "No"
-          },
-          {
-            "original_cn": "核武器是否会在战争中被使用？",
-            "scenario_question_en": "Could nuclear weapons or nuclear-related threats emerge as part of the conflict?",
-            "answer": "No"
-          }
-        ]
-      },
-      {
-        "title": "T6: Mar 3, U.S. Begins Evacuation of Citizens from the Middle East",
-        "event_datetime": "2026-03-03T12:00:00Z",
-        "questions": [
-          {
-            "original_cn": "其他国家是否也会紧随着撤侨？",
-            "scenario_question_en": "Are other countries likely to begin evacuating their citizens from the region as well?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "美国是否会开动地面部队？",
-            "scenario_question_en": "Could the United States deploy ground forces if the conflict escalates further?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "其他国家是否会关闭或缩减外交使馆？",
-            "scenario_question_en": "Are foreign governments likely to close or reduce operations at diplomatic missions in the region?",
-            "answer": "Yes"
-          }
-        ]
-      },
-      {
-        "title": "T7: Mar 3, Nine Countries Involved and Israeli Ground Invasion",
-        "event_datetime": "2026-03-03T12:00:00Z",
-        "questions": [
-          {
-            "original_cn": "战争是否会进一步扩大化，是否会有更多的国家被卷入？",
-            "scenario_question_en": "Is the conflict likely to expand further, involving additional countries?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "是否各个国家之间都会产生地面入侵？",
-            "scenario_question_en": "Could multiple countries initiate ground operations as the war escalates?",
-            "answer": "No"
-          },
-          {
-            "original_cn": "伊朗是否会扩大对真主党的支持？",
-            "scenario_question_en": "Is Iran likely to increase military or logistical support for Hezbollah?",
-            "answer": "Yes"
-          }
-        ]
-      },
-      {
-        "title": "T8: Mar 3, Mojtaba Khamenei Becomes Supreme Leader",
-        "event_datetime": "2026-03-03T12:00:00Z",
-        "questions": [
-          {
-            "original_cn": "新最高领袖是否会扩大报复行动？是否会寻求外交谈判或停火？",
-            "scenario_question_en": "Is the new leadership more likely to escalate military retaliation rather than pursue negotiations?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "美国和以色列是否会继续针对新领导层实施打击？",
-            "scenario_question_en": "Are the United States and Israel likely to target the new leadership structure in further strikes?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "伊朗国内是否会出现政治动荡或抗议？",
-            "scenario_question_en": "Could the leadership transition trigger domestic unrest or protests in Iran?",
-            "answer": "Yes"
-          }
-        ]
-      },
-      {
-        "title": "T9: Mar 4, Qatar Halts Energy Production",
-        "event_datetime": "2026-03-02T12:00:00Z",
-        "questions": [
-          {
-            "original_cn": "欧洲或亚洲是否会出现天然气短缺风险？",
-            "scenario_question_en": "Could Qatar's decision lead to natural gas shortages in Europe or Asia?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "全球天然气价格是否会大幅上涨？",
-            "scenario_question_en": "Are global natural gas prices likely to increase significantly as a result?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "海湾地区其他LNG或炼油设施是否会遭到攻击?",
-            "scenario_question_en": "Could other LNG facilities or energy infrastructure in the Gulf region become targets?",
-            "answer": "Yes"
-          },
-          {
-            "original_cn": "欧洲和亚洲国家是否会寻找替代能源供应？",
-            "scenario_question_en": "Are major energy-importing countries likely to seek alternative supply sources?",
-            "answer": "Yes"
-          }
-        ]
-      },
-      {
-        "title": "T10: Mar 6, Iranian Apology to Neighboring Countries",
-        "event_datetime": "2026-03-06T12:00:00Z",
-        "questions": [
-          {
-            "original_cn": "伊朗是否会停止对其他海湾国家的进攻？",
-            "scenario_question_en": "Is Iran likely to reduce or halt attacks on neighboring Gulf states?",
-            "answer": "No"
-          },
-          {
-            "original_cn": "伊朗是否会需求停火谈判？",
-            "scenario_question_en": "Could Iran begin pursuing ceasefire negotiations or diplomatic talks?",
-            "answer": "No"
-          },
-          {
-            "original_cn": "欧洲或联合国是否会利用这一信号推动谈判？",
-            "scenario_question_en": "Are international actors such as the EU or the United Nations likely to push for negotiations following this signal?",
-            "answer": "No"
-          },
-          {
-            "original_cn": "是否整体的冲突会降级？",
-            "scenario_question_en": "Could the overall intensity of the conflict begin to decrease?",
-            "answer": "No"
-          }
-        ]
-      }
+        {
+            "title": "T0: Feb 27, Operation Epic Fury",
+            "event_datetime": "2026-02-27T20:38:00Z",
+            "questions": [
+                {
+                    "original_cn": "美国是否会真的进攻伊朗本土？",
+                    "scenario_question_en": "Is the United States likely to conduct direct military strikes on Iranian territory?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "美国是否会采用经济制裁？",
+                    "scenario_question_en": "Could the United States prioritize economic sanctions or diplomatic pressure over military action?",
+                    "answer": "No",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "这是否意味着战争的开始？",
+                    "scenario_question_en": "Does the announcement of Operation Epic Fury signal the beginning of a broader military conflict?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "美国和以色列未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by the United States and Israel?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊朗未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by Iran?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "其他主要国家可能的参与或反应是什么？",
+                    "scenario_question_en": "What are the potential involvement or reactions from other major countries?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "冲突是否会升级为全球战争？",
+                    "scenario_question_en": "Will the conflict escalate into a global war?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊美冲突最可能的降级或解决路径是什么？合理的时间线预期是怎样的？",
+                    "scenario_question_en": "What is the most probable pathway to de-escalation or resolution of the Iran-US conflict, and what is a realistic timeline?",
+                    "answer": "",
+                    "type": "open"
+                }
+            ]
+        },
+        {
+            "title": "T1: Feb 28, Israeli-US Strikes",
+            "event_datetime": "2026-02-28T06:15:00Z",
+            "questions": [
+                {
+                    "original_cn": "美国会不会继续扩大空袭？",
+                    "scenario_question_en": "Are the Israeli-U.S. strikes likely to escalate into a broader military campaign?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "伊朗会不会进行报复？",
+                    "scenario_question_en": "Is Iran likely to retaliate militarily in response to the strikes?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "如果伊朗决定报复，他的目标会是哪里？美军事基地，还是直接无差别轰炸？",
+                    "scenario_question_en": "If Iran retaliates, is it more likely to indiscriminately bomb Israeli-U.S. territory than to target U.S. military bases?",
+                    "answer": "No",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "海湾国家是否会成为伊朗的报复目标？",
+                    "scenario_question_en": "Could Gulf states become direct targets of Iranian retaliation?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "中东空域是否会关闭？",
+                    "scenario_question_en": "Is regional airspace in the Middle East likely to face widespread closures due to security risks?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "美国和以色列未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by the United States and Israel?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊朗未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by Iran?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "其他主要国家可能的参与或反应是什么？",
+                    "scenario_question_en": "What are the potential involvement or reactions from other major countries?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "冲突是否会升级为全球战争？",
+                    "scenario_question_en": "Will the conflict escalate into a global war?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊美冲突最可能的降级或解决路径是什么？合理的时间线预期是怎样的？",
+                    "scenario_question_en": "What is the most probable pathway to de-escalation or resolution of the Iran-US conflict, and what is a realistic timeline?",
+                    "answer": "",
+                    "type": "open"
+                }
+            ]
+        },
+        {
+            "title": "T2: Feb 28, Iranian Strikes",
+            "event_datetime": "2026-02-28T06:40:00Z",
+            "questions": [
+                {
+                    "original_cn": "这次伊朗打击是一次象征性报复，还是持续军事行动的第一波？",
+                    "scenario_question_en": "Are the Iranian strikes likely to remain symbolic retaliation without sustained military operations?",
+                    "answer": "No",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "霍尔木兹海峡是否会受到威胁？",
+                    "scenario_question_en": "Could Iran attempt to disrupt shipping through the Strait of Hormuz?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "受伊朗冲突影响的中东其他国家是否会参战？",
+                    "scenario_question_en": "Are other countries in the region likely to become directly involved in the conflict?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "中东空域是否会关闭？",
+                    "scenario_question_en": "Is large-scale closure of Middle Eastern airspace likely following these strikes?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "伊朗内部会不会发生叛乱？",
+                    "scenario_question_en": "Could the conflict trigger internal rebel army within Iran?",
+                    "answer": "No",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "美国和以色列未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by the United States and Israel?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊朗未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by Iran?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "其他主要国家可能的参与或反应是什么？",
+                    "scenario_question_en": "What are the potential involvement or reactions from other major countries?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "冲突是否会升级为全球战争？",
+                    "scenario_question_en": "Will the conflict escalate into a global war?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊美冲突最可能的降级或解决路径是什么？合理的时间线预期是怎样的？",
+                    "scenario_question_en": "What is the most probable pathway to de-escalation or resolution of the Iran-US conflict, and what is a realistic timeline?",
+                    "answer": "",
+                    "type": "open"
+                }
+            ]
+        },
+        {
+            "title": "T3: Mar 1, Two Missiles towards British Bases on Cyprus",
+            "event_datetime": "2026-03-01T12:00:00Z",
+            "questions": [
+                {
+                    "original_cn": "英国会不会正式介入战争？",
+                    "scenario_question_en": "Is the United Kingdom likely to become directly involved in the conflict?",
+                    "answer": "No",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "北约会不会被卷入，战争是否扩展到地中海战区？",
+                    "scenario_question_en": "Is NATO become involved, expanding the conflict into the Mediterranean theater?",
+                    "answer": "No",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "地中海航运是否受到影响？",
+                    "scenario_question_en": "Could the conflict disrupt commercial shipping or maritime security in the Mediterranean?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "美国和以色列未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by the United States and Israel?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊朗未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by Iran?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "其他主要国家可能的参与或反应是什么？",
+                    "scenario_question_en": "What are the potential involvement or reactions from other major countries?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "冲突是否会升级为全球战争？",
+                    "scenario_question_en": "Will the conflict escalate into a global war?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊美冲突最可能的降级或解决路径是什么？合理的时间线预期是怎样的？",
+                    "scenario_question_en": "What is the most probable pathway to de-escalation or resolution of the Iran-US conflict, and what is a realistic timeline?",
+                    "answer": "",
+                    "type": "open"
+                }
+            ]
+        },
+        {
+            "title": "T4: Mar 1, Oil Refiner and Oil Tanker Was Attacked",
+            "event_datetime": "2026-03-01T22:00:00Z",
+            "questions": [
+                {
+                    "original_cn": "伊朗是否会持续攻击更多邮轮，来进行事实上对霍尔木兹海峡的封锁？",
+                    "scenario_question_en": "Is Iran likely to continue targeting oil tankers in an attempt to disrupt traffic through the Strait of Hormuz?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "国际海军是否会建立护航行动？",
+                    "scenario_question_en": "Could international naval forces establish escort missions to protect commercial shipping?",
+                    "answer": "No",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "美国海军是否会建立护航行动？",
+                    "scenario_question_en": "Could American naval forces establish escort missions to protect commercial shipping?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "能源基础设施是否会成为主要战场，伊朗是否会攻击更多炼油厂水厂等能源相关设施？",
+                    "scenario_question_en": "Are energy facilities such as refineries, desalination plants, and oil terminals likely to become primary targets?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "油价是否会产生剧烈波动？",
+                    "scenario_question_en": "Could these attacks lead to significant volatility in global oil prices?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "美国和以色列未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by the United States and Israel?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊朗未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by Iran?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "其他主要国家可能的参与或反应是什么？",
+                    "scenario_question_en": "What are the potential involvement or reactions from other major countries?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "冲突是否会升级为全球战争？",
+                    "scenario_question_en": "Will the conflict escalate into a global war?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊美冲突最可能的降级或解决路径是什么？合理的时间线预期是怎样的？",
+                    "scenario_question_en": "What is the most probable pathway to de-escalation or resolution of the Iran-US conflict, and what is a realistic timeline?",
+                    "answer": "",
+                    "type": "open"
+                }
+            ]
+        },
+        {
+            "title": "T5: Mar 4, Qatar Halts Energy Production",
+            "event_datetime": "2026-03-02T06:00:00Z",
+            "questions": [
+                {
+                    "original_cn": "欧洲或亚洲是否会出现天然气短缺风险？",
+                    "scenario_question_en": "Could Qatar's decision lead to natural gas shortages in Europe or Asia?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "全球天然气价格是否会大幅上涨？",
+                    "scenario_question_en": "Are global natural gas prices likely to increase significantly as a result?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "海湾地区其他LNG或炼油设施是否会遭到攻击?",
+                    "scenario_question_en": "Could other LNG facilities or energy infrastructure in the Gulf region become targets?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "欧洲和亚洲国家是否会寻找替代能源供应？",
+                    "scenario_question_en": "Are major energy-importing countries likely to seek alternative supply sources?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "美国和以色列未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by the United States and Israel?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊朗未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by Iran?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "其他主要国家可能的参与或反应是什么？",
+                    "scenario_question_en": "What are the potential involvement or reactions from other major countries?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "冲突是否会升级为全球战争？",
+                    "scenario_question_en": "Will the conflict escalate into a global war?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊美冲突最可能的降级或解决路径是什么？合理的时间线预期是怎样的？",
+                    "scenario_question_en": "What is the most probable pathway to de-escalation or resolution of the Iran-US conflict, and what is a realistic timeline?",
+                    "answer": "",
+                    "type": "open"
+                }
+            ]
+        },
+        {
+            "title": "T6: Mar 2, Natanz Nuclear Facility Damaged",
+            "event_datetime": "2026-03-02T10:00:00Z",
+            "questions": [
+                {
+                    "original_cn": "美国以色列是否会持续的攻击核设施？",
+                    "scenario_question_en": "Are the United States and Israel likely to continue targeting Iranian nuclear facilities?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "以色列核设施会不会遭到破坏",
+                    "scenario_question_en": "Will Isreal nuclear-related infrastructure be damaged?",
+                    "answer": "No",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "伊朗是否会退出核不扩散框架？",
+                    "scenario_question_en": "Is Iran likely to withdraw from nuclear non-proliferation commitments?",
+                    "answer": "No",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "核武器是否会在战争中被使用？",
+                    "scenario_question_en": "Could nuclear weapons or nuclear-related threats emerge as part of the conflict?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "美国和以色列未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by the United States and Israel?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊朗未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by Iran?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "其他主要国家可能的参与或反应是什么？",
+                    "scenario_question_en": "What are the potential involvement or reactions from other major countries?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "冲突是否会升级为全球战争？",
+                    "scenario_question_en": "Will the conflict escalate into a global war?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊美冲突最可能的降级或解决路径是什么？合理的时间线预期是怎样的？",
+                    "scenario_question_en": "What is the most probable pathway to de-escalation or resolution of the Iran-US conflict, and what is a realistic timeline?",
+                    "answer": "",
+                    "type": "open"
+                }
+            ]
+        },
+        {
+            "title": "T7: Mar 3, U.S. Begins Evacuation of Citizens from the Middle East",
+            "event_datetime": "2026-03-03T11:55:00Z",
+            "questions": [
+                {
+                    "original_cn": "其他国家是否也会紧随着撤侨？",
+                    "scenario_question_en": "Are other countries likely to begin evacuating their citizens from the region as well?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "美国是否会开动地面部队？",
+                    "scenario_question_en": "Could the United States deploy ground forces if the conflict escalates further?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "其他国家是否会关闭或缩减外交使馆？",
+                    "scenario_question_en": "Are foreign governments likely to close or reduce operations at diplomatic missions in the region?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "美国和以色列未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by the United States and Israel?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊朗未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by Iran?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "其他主要国家可能的参与或反应是什么？",
+                    "scenario_question_en": "What are the potential involvement or reactions from other major countries?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "冲突是否会升级为全球战争？",
+                    "scenario_question_en": "Will the conflict escalate into a global war?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊美冲突最可能的降级或解决路径是什么？合理的时间线预期是怎样的？",
+                    "scenario_question_en": "What is the most probable pathway to de-escalation or resolution of the Iran-US conflict, and what is a realistic timeline?",
+                    "answer": "",
+                    "type": "open"
+                }
+            ]
+        },
+        {
+            "title": "T8: Mar 3, Nine Countries Involved and Israeli Ground Invasion",
+            "event_datetime": "2026-03-04T06:00:00Z",
+            "questions": [
+                {
+                    "original_cn": "战争是否会进一步扩大化，是否会有更多的国家被卷入？",
+                    "scenario_question_en": "Is the conflict likely to expand further, involving additional countries?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "是否各个国家之间都会产生地面入侵？",
+                    "scenario_question_en": "Could multiple countries initiate ground operations as the war escalates?",
+                    "answer": "No",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "伊朗是否会扩大对真主党的支持？",
+                    "scenario_question_en": "Is Iran likely to increase military or logistical support for Hezbollah?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "美国和以色列未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by the United States and Israel?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊朗未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by Iran?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "其他主要国家可能的参与或反应是什么？",
+                    "scenario_question_en": "What are the potential involvement or reactions from other major countries?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "冲突是否会升级为全球战争？",
+                    "scenario_question_en": "Will the conflict escalate into a global war?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊美冲突最可能的降级或解决路径是什么？合理的时间线预期是怎样的？",
+                    "scenario_question_en": "What is the most probable pathway to de-escalation or resolution of the Iran-US conflict, and what is a realistic timeline?",
+                    "answer": "",
+                    "type": "open"
+                }
+            ]
+        },
+        {
+            "title": "T9: Mar 3, Mojtaba Khamenei Becomes Supreme Leader",
+            "event_datetime": "2026-03-04T10:00:00Z",
+            "questions": [
+                {
+                    "original_cn": "新最高领袖是否会扩大报复行动？是否会寻求外交谈判或停火？",
+                    "scenario_question_en": "Is the new leadership more likely to escalate military retaliation rather than pursue negotiations?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "美国和以色列是否会继续针对新领导层实施打击？",
+                    "scenario_question_en": "Are the United States and Israel likely to target the new leadership structure in further strikes?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "伊朗国内是否会出现政治动荡或抗议？",
+                    "scenario_question_en": "Could the leadership transition trigger domestic unrest or protests in Iran?",
+                    "answer": "Yes",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "美国和以色列未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by the United States and Israel?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊朗未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by Iran?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "其他主要国家可能的参与或反应是什么？",
+                    "scenario_question_en": "What are the potential involvement or reactions from other major countries?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "冲突是否会升级为全球战争？",
+                    "scenario_question_en": "Will the conflict escalate into a global war?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊美冲突最可能的降级或解决路径是什么？合理的时间线预期是怎样的？",
+                    "scenario_question_en": "What is the most probable pathway to de-escalation or resolution of the Iran-US conflict, and what is a realistic timeline?",
+                    "answer": "",
+                    "type": "open"
+                }
+            ]
+        },
+        {
+            "title": "T10: Mar 6, Iranian Apology to Neighboring Countries",
+            "event_datetime": "2026-03-05T18:00:00Z",
+            "questions": [
+                {
+                    "original_cn": "伊朗是否会停止对其他海湾国家的进攻？",
+                    "scenario_question_en": "Is Iran likely to reduce or halt attacks on neighboring Gulf states?",
+                    "answer": "No",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "伊朗是否会需求停火谈判？",
+                    "scenario_question_en": "Could Iran begin pursuing ceasefire negotiations or diplomatic talks?",
+                    "answer": "No",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "欧洲或联合国是否会利用这一信号推动谈判？",
+                    "scenario_question_en": "Are international actors such as the EU or the United Nations likely to push for negotiations following this signal?",
+                    "answer": "No",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "是否整体的冲突会降级？",
+                    "scenario_question_en": "Could the overall intensity of the conflict begin to decrease?",
+                    "answer": "No",
+                    "type": "specific"
+                },
+                {
+                    "original_cn": "美国和以色列未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by the United States and Israel?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊朗未来可能的行动是什么？",
+                    "scenario_question_en": "What are the potential future actions by Iran?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "其他主要国家可能的参与或反应是什么？",
+                    "scenario_question_en": "What are the potential involvement or reactions from other major countries?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "冲突是否会升级为全球战争？",
+                    "scenario_question_en": "Will the conflict escalate into a global war?",
+                    "answer": "",
+                    "type": "open"
+                },
+                {
+                    "original_cn": "伊美冲突最可能的降级或解决路径是什么？合理的时间线预期是怎样的？",
+                    "scenario_question_en": "What is the most probable pathway to de-escalation or resolution of the Iran-US conflict, and what is a realistic timeline?",
+                    "answer": "",
+                    "type": "open"
+                }
+            ]
+        }
     ]
-  }
+}

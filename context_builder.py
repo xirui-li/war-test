@@ -66,9 +66,12 @@ def format_articles_for_prompt(articles: list[dict]) -> str:
         date_str = art["published_at"][:16]  # YYYY-MM-DDTHH:MM
         title = art.get("title", "Untitled")[:120]
         source = art.get("source_name", "Unknown")
-        body = art.get("body_text", "")[:MAX_BODY_CHARS]
-
-        entry = f"[{date_str}] {title} ({source})\n{body}\n"
+        # Only include body if it adds info beyond the title
+        if art.get("body_has_extra_info", True):
+            body = art.get("body_text", "")[:MAX_BODY_CHARS]
+            entry = f"[{date_str}] {title} ({source})\n{body}\n"
+        else:
+            entry = f"[{date_str}] {title} ({source})\n"
 
         if total_chars + len(entry) > MAX_CONTEXT_CHARS:
             remaining = len(articles) - i
