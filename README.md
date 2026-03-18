@@ -57,7 +57,7 @@ pip install -r requirements.txt
 
 📦 **Data** is automatically downloaded from [HuggingFace](https://huggingface.co/datasets/AIcell/war-test-dataset) on first run.
 
-🔑 **API Key**: All API calls go through [OpenRouter](https://openrouter.ai/). Sign up for a free account and get your API key, then create `../war-prediction-LLMs/config.json`:
+🔑 **API Key**: All API calls go through [OpenRouter](https://openrouter.ai/). Sign up for a free account and get your API key, then create `../war-prediction-LLMs/config.json` (please note that only paid account could use the full context of models):
 
 ```json
 {
