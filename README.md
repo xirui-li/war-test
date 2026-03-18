@@ -79,9 +79,6 @@ python src/run_predictions.py --models openai/gpt-5.4 --time-points T3
 
 # Full benchmark (all models, all time points)
 bash run_all.sh
-
-# Evaluate predictions
-python src/evaluate.py
 ```
 
 ## 📁 File Structure
@@ -98,8 +95,6 @@ war-test/
 │   ├── prompt_builder.py      # System + user prompt construction
 │   ├── response_parser.py     # LLM JSON response parsing
 │   ├── run_predictions.py     # Main inference pipeline
-│   ├── evaluate.py            # Evaluate predictions via GPT-4o-mini
-│   ├── summarize_responses.py # Extract probability statements
 │   ├── rerun.py               # Re-run specific failed predictions
 │   ├── run_new_question.py    # Run predictions for new questions
 │   ├── build_articles.py      # Build articles dataset from raw sources

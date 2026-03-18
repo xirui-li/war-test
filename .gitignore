@@ -24,6 +24,8 @@ test_dataset.json
 # Internal scripts (not included in public release)
 src/translate.py
 src/export_hf.py
+src/evaluate.py
+src/summarize_responses.py
 run_eval_and_translate.sh
 
 # Wiki baseline
