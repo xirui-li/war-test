@@ -26,6 +26,12 @@ src/translate.py
 src/export_hf.py
 src/evaluate.py
 src/summarize_responses.py
+src/rerun.py
+src/run_new_question.py
+src/build_articles.py
+src/fetch_fulltext.py
+src/audit_data.py
+src/preview_prompt.py
 run_eval_and_translate.sh
 
 # Wiki baseline

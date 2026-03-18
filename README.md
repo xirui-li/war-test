@@ -94,13 +94,7 @@ war-test/
 │   ├── context_builder.py     # Article filtering by cutoff datetime
 │   ├── prompt_builder.py      # System + user prompt construction
 │   ├── response_parser.py     # LLM JSON response parsing
-│   ├── run_predictions.py     # Main inference pipeline
-│   ├── rerun.py               # Re-run specific failed predictions
-│   ├── run_new_question.py    # Run predictions for new questions
-│   ├── build_articles.py      # Build articles dataset from raw sources
-│   ├── fetch_fulltext.py      # Fetch full text for headline-only articles
-│   ├── audit_data.py          # Data quality audit
-│   └── preview_prompt.py      # Preview prompts and token estimates
+│   └── run_predictions.py     # Main inference pipeline
 ├── assets/                    # Images
 └── dataset/                   # HuggingFace dataset card & parquet
 ```
